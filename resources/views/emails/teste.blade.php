@@ -1,0 +1,1 @@
+<h1>Teste de envio de e-mail com o mailgun</h1>
