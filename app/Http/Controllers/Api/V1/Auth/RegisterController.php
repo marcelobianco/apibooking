@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Api\V1\Auth;
 
+use App\Enums\ResponseCode;
 use App\Enums\Roles;
 use App\Http\Controllers\Controller;
 use App\Models\User;
@@ -34,6 +35,6 @@ class RegisterController extends Controller
 
         return response()->json([
             'access_token' => $user->createToken('client')->plainTextToken,
-        ], 201);
+        ], ResponseCode::HTTP_CREATED);
     }
 }
